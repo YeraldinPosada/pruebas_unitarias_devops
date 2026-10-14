@@ -38,3 +38,4 @@ def test_calcular_area_rectangulo_positivos():
     resultado = calcular_area_rectangulo(base, altura)
     # Assert
     assert resultado == 24
+
