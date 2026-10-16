@@ -12,11 +12,11 @@ def parse_csv_line(linea):
         return []
 
     # Manejar comillas
-    if '"' in linea:
-        # BUG 1: No maneja correctamente comillas anidadas o escapadas
-        return linea.split(',')
-
-    return linea.split(',')
+    # BUG 1: No maneja correctamente comillas anidadas o escapadas-> CORREGIDO
+    lector = csv.reader(StringIO(linea))
+    for fila in lector:
+        return file
+    return []    
 
 def leer_csv_como_lista(contenido_csv):
     """Lee el contenido de un CSV y retorna una lista de listas."""
@@ -44,11 +44,13 @@ def csv_a_diccionarios(contenido_csv, tiene_cabecera=True):
 
         resultado = []
         for fila in datos:
-            # BUG 2: No maneja filas con diferente número de columnas
+            # BUG 2: No maneja filas con diferente número de columnas->CORREGIDO
             fila_dict = {}
             for i, valor in enumerate(fila):
                 if i < len(cabeceras):
                     fila_dict[cabeceras[i]] = valor
+	    for i in range(len(fila), len(cabeceras)):
+                fila_dict[cabeceras[i]] = ""
             resultado.append(fila_dict)
 
         return resultado
