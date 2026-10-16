@@ -1,4 +1,4 @@
-#Pruebas Unitarias (DevOps)
+##Pruebas Unitarias (DevOps)
 
 Repositorio dedicado a la aplicación de Desarrollo de pruebas unitarias AAA, detección y corrección de bugs lógicos, pruebas con simulación (*mocking*) e integración continua (CI/CD) utilizando Python.
 
@@ -30,4 +30,4 @@ Repositorio dedicado a la aplicación de Desarrollo de pruebas unitarias AAA, de
 ## Informe Completo
 Para consultar el desarrollo detallado del proyecto, el análisis por módulo, las tablas de errores y las evidencias de ejecución, puedes revisar el documento oficial:
 
-👉 **[Ver Informe Completo del Taller (PDF)](TallerDevops.pdf)**
+👉 **[Ver Informe Completo del Taller (PDF)](TallerDevOps.pdf)**
