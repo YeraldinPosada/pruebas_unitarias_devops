@@ -101,10 +101,11 @@ def test_calcular_precio_final_bug_impuesto():
     assert resultado == 108.0
 
 
-def test_descuento_apilado_bug_exceder_100():
-    # Bug 2: El descuento total puede exceder el 100% sin control.
-    # Arrange: Descuentos que suman 110% (60% + 50%).
-    # Lógica correcta: Un descuento total superior al 100% no debería dar un precio negativo 
-    # (haciendo que la tienda "le pague" al cliente) o debería lanzar un error.
-    resultado = descuento_apilado(100.0, [60.0, 50.0])
-    assert resultado >= 0.0
+def test_descuento_apilado_excede_100_lanza_error():
+    # Arrange: Descuentos que suman más del 100% (60% + 50% = 110%)
+    precio = 100.0
+    descuentos = [60.0, 50.0]
+    
+    # Act & Assert: Ahora que el bug está solucionado, debe lanzar un ValueError controlado
+    with pytest.raises(ValueError):
+        descuento_apilado(precio, descuentos)

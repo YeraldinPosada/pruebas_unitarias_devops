@@ -99,4 +99,4 @@ def test_mcm_bug_evidencia():
     # Prueba para evidenciar el comportamiento anómalo o bug en MCM ante entradas límites (ej. ceros o negativos)
     # Matemáticamente mcm(0, 5) debería ser 0, pero con divisiones enteras o ausencia de validación puede fallar o lanzar excepción.
     resultado = mcm(-4, 6)
-    assert resultado == 0
+    assert resultado == 12

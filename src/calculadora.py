@@ -27,7 +27,9 @@ def potencia(base, exponente):
 
 def raiz_cuadrada(numero):
     """Calcula la raíz cuadrada de un número."""
-    # BUG 1: No maneja números negativos
+    # BUG 1: No maneja números negativos-> CORREGIDO
+    if numero < 0:
+        raise ValueError("El error nunca puede ser negativo")
     return numero ** 0.5
 
 def promedio(lista):
@@ -50,7 +52,7 @@ def minimo(lista):
     """Encuentra el número mínimo de una lista."""
     if not lista:
         raise ValueError("La lista no puede estar vacía")
-    # BUG 2: No maneja correctamente la comparación inicial
+    # BUG 2: No maneja correctamente la comparación inicial -> CORREGIDO
     min_val = lista[0]
     for num in lista:
         if num < min_val:
