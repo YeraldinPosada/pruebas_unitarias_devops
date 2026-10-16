@@ -1,4 +1,4 @@
-# Auditoría de Calidad y Pruebas Unitarias (DevOps)
+#Pruebas Unitarias (DevOps)
 
 Repositorio dedicado a la aplicación de Desarrollo de pruebas unitarias AAA, detección y corrección de bugs lógicos, pruebas con simulación (*mocking*) e integración continua (CI/CD) utilizando Python.
 
